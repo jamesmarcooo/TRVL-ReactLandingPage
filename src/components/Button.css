@@ -32,3 +32,10 @@
   padding: 12px 26px;
   font-size: 20px;
 }
+
+.btn--medium:hover,
+.btn--large:hover {
+  background: white;
+  color: #242424;
+  transition: all 0.3s ease-out;
+}

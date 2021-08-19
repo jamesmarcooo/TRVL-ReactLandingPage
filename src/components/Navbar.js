@@ -3,10 +3,21 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
     const [click, setClick] = useState(false); {/*sets the initial value of the states */}
+    const [button, setButton] = useState(true);
 
     const handleClick = () => setClick(!click); {/*changes the status of the nav icon*/}
-
     const closeMobileMenu = () => setClick(false); {/*to close the menu when clicked */}
+    const showButton = () => {
+        if(window.innerWidth <= 960){
+            setButton(false);
+        }else{
+            setButton(true);
+        }
+    };
+
+    window.addEventListener('resize', showButton);
+
+
 
     return (
         <>
@@ -52,6 +63,7 @@ function Navbar() {
                             </Link>
                         </li>
                     </ul>
+                    {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
                 </div>
             </nav>
         </>
