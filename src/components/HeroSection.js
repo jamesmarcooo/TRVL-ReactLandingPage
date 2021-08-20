@@ -7,7 +7,7 @@ function HeroSection() {
             <h1>ADVENTURE AWAITS</h1>
             <p>What are you waiting for?</p>
             <div className="hero-btns"></div>
-                <Button className="btns" buttonSyle="btn--outline"></Button>
+                <Button className="btns" buttonSyle="btn--outline">GET STARTED</Button>
 
         </div>
     )
